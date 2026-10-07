@@ -8,28 +8,28 @@ html {
 
 body {
   margin: 0;
-  font: 1.0625rem/1.7 Arial, sans-serif;
-  color: #27333b;
+  font: 1.125rem/1.7 "Source Sans 3", Arial, sans-serif;
+  color: #223b4b;
   background: #fafbfc;
 }
 
 a {
-  color: #174ea6;
+  color: #316c8a;
   text-underline-offset: .2em;
 }
 
 a:hover {
-  color: #10366f;
+  color: #223b4b;
 }
 
 a:focus-visible {
-  outline: 3px solid #174ea6;
+  outline: 3px solid #316c8a;
   outline-offset: 5px;
 }
 
 ::selection {
-  color: #18303f;
-  background: #d5e5ef;
+  color: #223b4b;
+  background: #b8cdd8;
 }
 
 .wrap {
@@ -39,20 +39,20 @@ a:focus-visible {
 
 .page-header {
   padding: 1.5rem 0 2.5rem;
-  color: #fff;
+  color: #fafbfc;
   background: #223b4b;
 }
 
 .page-header a {
-  color: #dae4eb;
+  color: #b8cdd8;
 }
 
 .page-header a:focus-visible {
-  outline-color: #fff;
+  outline-color: #fafbfc;
 }
 
 h1, h2 {
-  font-family: Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: normal;
   line-height: 1.2;
 }
@@ -64,7 +64,7 @@ h1 {
 
 .page-header p {
   margin: 0;
-  color: #dae4eb;
+  color: #b8cdd8;
 }
 
 .layout {
@@ -83,7 +83,9 @@ h1 {
 
 .contents h2 {
   margin: 0 0 .75rem;
-  font: bold 1rem/1.5 Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .contents ul {
@@ -99,6 +101,7 @@ h1 {
 
 .reading {
   min-width: 0;
+  max-width: 100ch;
 }
 
 p {
@@ -140,37 +143,38 @@ figure img {
 figcaption {
   max-width: 36rem;
   margin: .8rem auto 0;
-  color: #57636d;
-  font-size: .9375rem;
+  color: #316c8a;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
 blockquote {
   margin: 1.5rem 0;
   padding: 1.25rem 1.5rem;
-  background: #edf2f5;
+  background: #b8cdd8;
 }
 
 blockquote p {
   margin: 0;
-  font: 1.4rem/1.5 Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 .quote-credit {
-  font-size: .9375rem;
-  color: #57636d;
+  font-size: 1rem;
+  color: #316c8a;
 }
 
 .sources {
   padding-top: 2rem;
-  border-top: 1px solid #d2dce2;
+  border-top: 1px solid #7898aa;
   font-size: .9375rem;
   overflow-wrap: anywhere;
 }
 
 .page-footer {
   padding: 1.5rem 0;
-  border-top: 1px solid #d2dce2;
+  border-top: 1px solid #7898aa;
 }
 
 .page-footer .wrap {
@@ -190,7 +194,7 @@ blockquote p {
   left: 1rem;
   top: -5rem;
   padding: .75rem 1rem;
-  background: #fff;
+  background: #fafbfc;
   z-index: 2;
 }
 
@@ -224,7 +228,7 @@ blockquote p {
     position: static;
     margin-bottom: 2rem;
     padding-bottom: 1.25rem;
-    border-bottom: 1px solid #d2dce2;
+    border-bottom: 1px solid #7898aa;
   }
 
   .contents ul {
