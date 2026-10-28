@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare the Voyager missions and explore their history.">
+  <title>Voyager 1 and 2 | Bryce Davis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="page-header" id="top">
+    <div class="wrap">
+      <a class="back-link" href="../#tables-forms"><span class="material-icons" aria-hidden="true">arrow_back</span> Back to class portal</a>
+      <h1>Voyager 1 and 2</h1>
+      <p>A comparison of NASA's twin spacecraft.</p>
+    </div>
+  </header>
+
+  <div class="wrap layout">
+    <nav class="contents" aria-labelledby="contents-heading">
+      <h2 id="contents-heading">On this page</h2>
+      <ul>
+        <li><a href="#overview">Mission overview</a></li>
+        <li><a href="#milestones">Mission milestones</a></li>
+        <li><a href="#survey">Voyager survey</a></li>
+        <li><a href="#sources">Sources and credits</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section id="overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Mission overview</h2>
+        <blockquote cite="https://science.nasa.gov/mission/voyager/mission-overview/">
+          <p>The twin spacecraft Voyager 1 and Voyager 2 were launched by NASA in separate months in the summer of 1977 from Cape Canaveral, Florida.</p>
+        </blockquote>
+        <p class="source-note">From NASA's <cite><a href="https://science.nasa.gov/mission/voyager/mission-overview/">Voyager mission overview</a></cite>.</p>
+        <p>Both spacecraft visited Jupiter and Saturn. Voyager 2 continued to Uranus and Neptune, while Voyager 1 took a different path after its Saturn encounter. Voyager 1 also took the <a href="../pale-blue-dot/">Pale Blue Dot photograph</a> of Earth in 1990.</p>
+        <figure>
+          <img src="../pale-blue-dot/images/voyager.webp" width="800" height="626" alt="Voyager spacecraft with a large dish antenna and long instrument booms.">
+          <figcaption>A Voyager spacecraft. Image: NASA/JPL-Caltech. <a href="https://commons.wikimedia.org/wiki/File:Voyager.jpg">Image source and credit</a>.</figcaption>
+        </figure>
+      </section>
+
+      <section id="milestones" aria-labelledby="milestones-heading">
+        <h2 id="milestones-heading">Mission milestones</h2>
+        <p>Voyager 2 launched first, but Voyager 1 reached Jupiter and Saturn earlier. Dates below are grouped by month so the two routes are easy to compare.</p>
+        <table>
+          <caption>Major events in the Voyager missions</caption>
+          <thead>
+            <tr>
+              <th scope="col">Milestone</th>
+              <th scope="col">Voyager 1</th>
+              <th scope="col">Voyager 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Launch</th>
+              <td><time datetime="1977-09">September 1977</time></td>
+              <td><time datetime="1977-08">August 1977</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Jupiter flyby</th>
+              <td><time datetime="1979-03">March 1979</time></td>
+              <td><time datetime="1979-07">July 1979</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Saturn flyby</th>
+              <td><time datetime="1980-11">November 1980</time></td>
+              <td><time datetime="1981-08">August 1981</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Uranus flyby</th>
+              <td>Not visited</td>
+              <td><time datetime="1986-01">January 1986</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Neptune flyby</th>
+              <td>Not visited</td>
+              <td><time datetime="1989-08">August 1989</time></td>
+            </tr>
+            <tr>
+              <th scope="row">Entered interstellar space</th>
+              <td><time datetime="2012-08">August 2012</time></td>
+              <td><time datetime="2018-11">November 2018</time></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="source-note">Data from NASA's <a href="https://science.nasa.gov/mission/voyager/voyager-1/">Voyager 1 history</a> and <a href="https://science.nasa.gov/mission/voyager/voyager-2/">Voyager 2 history</a>.</p>
+        <details>
+          <summary>What is interstellar space?</summary>
+          <p>Interstellar space is the space between stars. Both Voyagers crossed the heliopause, the boundary where the Sun's outward-flowing solar wind meets the interstellar medium.</p>
+        </details>
+      </section>
+
+      <section id="survey" aria-labelledby="survey-heading">
+        <h2 id="survey-heading">Voyager survey</h2>
+        <p>This is a practice form. Both questions are required. Your answers are not sent or saved.</p>
+        <form id="voyager-form">
+          <div class="field">
+            <label for="spacecraft">Spacecraft (required)</label>
+            <select id="spacecraft" name="spacecraft" required>
+              <option value="">Choose a spacecraft</option>
+              <option value="1">Voyager 1</option>
+              <option value="2">Voyager 2</option>
+            </select>
+          </div>
+          <fieldset>
+            <legend>What would you like to learn about? (required)</legend>
+            <label class="choice" for="history"><input id="history" name="topic" type="radio" value="history" required checked> Mission history</label>
+            <label class="choice" for="spacecraft-design"><input id="spacecraft-design" name="topic" type="radio" value="design" required> Spacecraft design</label>
+          </fieldset>
+          <button type="submit"><span class="material-icons" aria-hidden="true">check</span> Check form</button>
+        </form>
+        <p id="form-feedback" role="status"></p>
+      </section>
+
+      <section class="sources" id="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources and credits</h2>
+        <p>The opening excerpt is from NASA. The summary and table use these NASA mission pages.</p>
+        <ul>
+          <li><a href="https://science.nasa.gov/mission/voyager/mission-overview/">Voyager mission overview</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/voyager-1/">Voyager 1 mission history</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/voyager-2/">Voyager 2 mission history</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/spacecraft/">Voyager spacecraft design</a></li>
+          <li><a href="https://science.nasa.gov/mission/voyager/interstellar-mission/">Voyager interstellar mission</a></li>
+        </ul>
+        <p>The spacecraft image is credited in its caption. Fonts and icons are from Google Fonts and Google Material Icons.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <h2 class="sr-only">Page information</h2>
+    <div class="wrap">
+      <p>Bryce Davis · ATLS-CSCI 3150 · Tables and Forms</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
