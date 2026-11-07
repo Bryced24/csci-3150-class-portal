@@ -3,165 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bryce Davis's coding projects for ATLS-CSCI 3150: Universal Design at CU Boulder.">
   <title>Bryce Davis | Class Portal</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      color: #27333b;
-      background-color: #fafbfc;
-    }
-
-    .container {
-      max-width: 848px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    header {
-      padding: 52px 0;
-      color: #ffffff;
-      background-color: #223b4b;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-family: Georgia, serif;
-      font-size: 2.75rem;
-      font-weight: normal;
-      line-height: 1.2;
-    }
-
-    header p {
-      margin: 0;
-      color: #dae4eb;
-    }
-
-    main.container {
-      padding-top: 40px;
-      padding-bottom: 64px;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 1.375rem;
-      line-height: 1.3;
-      color: #223b4b;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    section p {
-      max-width: 680px;
-    }
-
-    nav {
-      margin-top: 40px;
-    }
-
-    nav p {
-      font-size: 1rem;
-      color: #57636d;
-    }
-
-    ul {
-      margin: 20px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    li {
-      border-top: 1px solid #d2dce2;
-    }
-
-    li:last-child {
-      border-bottom: 1px solid #d2dce2;
-    }
-
-    a {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-      padding: 16px 4px;
-      color: #174ea6;
-      text-decoration: none;
-    }
-
-    .assignment-title {
-      font-weight: bold;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .status {
-      font-size: 0.875rem;
-      color: #57636d;
-    }
-
-    a:hover {
-      color: #10366f;
-      background-color: #edf2f5;
-    }
-
-    a:focus-visible {
-      outline: 2px solid #174ea6;
-      outline-offset: 4px;
-    }
-
-    ::selection {
-      color: #18303f;
-      background-color: #d5e5ef;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 36px 0;
-      }
-
-      h1 {
-        font-size: 2.125rem;
-      }
-
-      main.container {
-        padding-top: 32px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="page-header" id="top">
     <div class="container">
       <h1>Bryce Davis's Class Portal</h1>
       <p>ATLS-CSCI 3150: Universal Design</p>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>About me</h2>
-      <p>Hi, I'm Bryce Davis. I'm going into my senior year studying computer science. I live in Firestone, Colorado, and have a dog named Remy.</p>
+  <main class="container" id="main" tabindex="-1">
+    <section class="about" aria-labelledby="about-heading">
+      <div class="about-copy">
+        <h2 id="about-heading">About me</h2>
+        <p>Hi, I'm Bryce Davis. I'm in my senior year studying computer science at CU Boulder. I live in Firestone, Colorado, and have a dog named Remy. I do a decent amount of data analysis at work.</p>
+        <p>I'm taking Universal Design to get better at building websites that more people can use. This portal brings together my coding projects for the course. I've been using the Voyager missions as the topic for my web pages.</p>
+      </div>
+      <div class="portrait">
+        <img src="images/bryce-photo.webp" width="1024" height="1280" alt="Bryce and a companion smiling together on a beach.">
+      </div>
     </section>
 
-    <nav id="assignments" aria-labelledby="assignments-heading">
-      <h2 id="assignments-heading">Coding assignments</h2>
-      <p>I'll update these links when the assignments are ready.</p>
-      <ul role="list">
-        <li id="semantic-html"><a href="pale-blue-dot/"><span class="assignment-title">Pale Blue Dot</span> <span class="status">Semantic HTML5 · Part 1</span></a></li>
-        <li id="semantic-html-part-2"><a href="pale-blue-dot/"><span class="assignment-title">Pale Blue Dot</span> <span class="status">Semantic HTML5 · Part 2</span></a></li>
-        <li id="tables-forms"><a href="tables-forms/"><span class="assignment-title">Voyager 1 and 2</span> <span class="status">Tables and Forms</span></a></li>
-        <li><a href="#assignments"><span class="assignment-title">Assignment 2</span> <span class="status">(coming soon)</span></a></li>
-        <li><a href="#assignments"><span class="assignment-title">Assignment 3</span> <span class="status">(coming soon)</span></a></li>
+    <nav class="projects" id="assignments" aria-labelledby="assignments-heading">
+      <h2 id="assignments-heading">Coding projects</h2>
+      <ul class="project-links">
+        <li id="semantic-html">
+          <span id="semantic-html-part-2"></span>
+          <a class="project-link" href="pale-blue-dot/">
+            <span class="assignment-title">Lab #2 - Coding &amp; Posting a Web Page - The Basics</span>
+            <span class="project-description">Pale Blue Dot</span>
+          </a>
+        </li>
+        <li id="tables-forms">
+          <a class="project-link" href="tables-forms/">
+            <span class="assignment-title">Lab #3 - Tables, Forms, Tabbed Browsing, and Screen Reading</span>
+            <span class="project-description">Voyager 1 and 2</span>
+          </a>
+        </li>
+        <li id="accessible-layout">
+          <a class="project-link" href="accessible-layout/">
+            <span class="assignment-title">Lab #4 - Accessible CSS Layout</span>
+            <span class="project-description">SpaceX Starship</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <h2 class="sr-only">Page information</h2>
+      <p>Bryce Davis · CU Boulder · Fall 2026</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
 </body>
 </html>
