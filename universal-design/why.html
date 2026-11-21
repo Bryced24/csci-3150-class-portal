@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Why web designers should use universal design, with facts about who uses the web and what the law requires.">
+  <title>Why universal design matters | Open Door</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <a class="logo" href="index.html">Open Door</a>
+      <nav aria-labelledby="menu-heading">
+        <h2 class="sr-only" id="menu-heading">Main menu</h2>
+        <ul>
+          <li><a href="why.html" aria-current="page">Why</a></li>
+          <li><a href="what.html">What</a></li>
+          <li><a href="how.html">How</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <header class="page-intro why">
+      <div class="wrap">
+        <h1>Why universal design matters</h1>
+        <p>Most websites still have accessibility errors that stop people from using them. This page covers who those errors affect and why designers should fix them.</p>
+      </div>
+    </header>
+
+    <div class="wrap page-layout">
+      <nav class="toc" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">On this page</h2>
+        <ul>
+          <li><a href="#users">Who uses the web</a></li>
+          <li><a href="#situations">Permanent, temporary, and situational</a></li>
+          <li><a href="#curb-cut">The curb cut effect</a></li>
+          <li><a href="#errors">Most sites still fail</a></li>
+          <li><a href="#law">The law</a></li>
+          <li><a href="#business">Business and search</a></li>
+          <li><a href="#movement">A grassroots movement</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <section id="users" aria-labelledby="users-heading">
+          <h2 id="users-heading">Who uses the web</h2>
+          <p>More than 1 in 4 adults in the United States have some type of disability, according to the <abbr title="Centers for Disease Control and Prevention">CDC</abbr>. Worldwide, the <abbr title="World Health Organization">WHO</abbr> estimates that 1.3 billion people have a significant disability. That is about 1 in 6 people.</p>
+          <p>The population is also getting older. U.S. Census projections show the share of people age 65 and older growing from about 18.7% in 2025 to 22% in 2040. Vision, hearing, movement, and memory can all change with age.</p>
+        </section>
+
+        <section id="situations" aria-labelledby="situations-heading">
+          <h2 id="situations-heading">Permanent, temporary, and situational</h2>
+          <p>Microsoft's Inclusive Design guide says people get left out when there is a mismatch between them and a design. That mismatch can be permanent, temporary, or situational.</p>
+          <p>Someone with one arm, someone with a broken arm, and a parent holding a baby all need to use a phone with one hand. A site that works with one hand helps all of them.</p>
+        </section>
+
+        <section id="curb-cut" aria-labelledby="curb-cut-heading">
+          <h2 id="curb-cut-heading">The curb cut effect</h2>
+          <p>Curb cuts are the small ramps where a sidewalk meets the street. Disability activists in Berkeley, California, pushed the city to build them, and Berkeley installed its first official curb cut in 1972. Now people with strollers, bikes, carts, and suitcases use them too.</p>
+          <p>Web accessibility features work the same way. Captions also help people watching a video in a loud room, and keyboard shortcuts help people who do not want to reach for a mouse.</p>
+        </section>
+
+        <section id="errors" aria-labelledby="errors-heading">
+          <h2 id="errors-heading">Most sites still fail</h2>
+          <p>In <time datetime="2026-02">February 2026</time>, WebAIM tested the home pages of the top one million websites. Automated tests found accessibility errors on 95.9% of those pages, with an average of 56.1 errors per page.</p>
+          <p>The six most common errors have stayed the same for seven years. The <a href="how.html#six-errors">How page</a> shows how to fix each one.</p>
+        </section>
+
+        <section id="law" aria-labelledby="law-heading">
+          <h2 id="law-heading">The law</h2>
+          <p>Section 508 requires federal agencies to make their websites accessible. In 2024, the Department of Justice added a rule under Title II of the Americans with Disabilities Act that requires state and local governments to meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Level AA. The rule covers public universities like CU Boulder, and their deadline is now <time datetime="2027-04-26">April 26, 2027</time>.</p>
+          <p>The European Accessibility Act has applied to many products and services since <time datetime="2025-06-28">June 28, 2025</time>.</p>
+        </section>
+
+        <section id="business" aria-labelledby="business-heading">
+          <h2 id="business-heading">Business and search</h2>
+          <p>About 1 in 6 people worldwide have a significant disability, so an inaccessible site loses a large group of possible customers. Search engines also read alt text and headings, which makes accessible pages easier to find.</p>
+        </section>
+
+        <section id="movement" aria-labelledby="movement-heading">
+          <h2 id="movement-heading">A grassroots movement</h2>
+          <p>Designers have changed the web before. In 2003, CSS Zen Garden showed that CSS alone could give one HTML page many different designs. The Web Standards Project pushed browser makers to follow W3C standards, and HTML5 added semantic elements like <code>header</code>, <code>nav</code>, <code>article</code>, and <code>footer</code>.</p>
+          <p>Universal design is the next step. Tim Berners-Lee, who invented the web, put it this way:</p>
+          <blockquote cite="https://www.w3.org/mission/accessibility/">
+            <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+          </blockquote>
+        </section>
+
+        <p class="next">Next, read <a href="what.html">what universal design is</a>.</p>
+
+        <section class="sources" id="sources" aria-labelledby="sources-heading">
+          <h2 id="sources-heading">Sources</h2>
+          <ul>
+            <li><a href="https://www.cdc.gov/disability-and-health/articles-documents/disability-impacts-all-of-us-infographic.html">CDC, Disability Impacts All of Us</a></li>
+            <li><a href="https://www.census.gov/data/tables/2023/demo/popproj/2023-summary-tables.html">U.S. Census Bureau, 2023 National Population Projections</a></li>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health">WHO, Disability and health fact sheet</a></li>
+            <li><a href="https://inclusive.microsoft.design/">Microsoft Inclusive Design</a></li>
+            <li><a href="https://ssir.org/articles/entry/the_curb_cut_effect">Angela Glover Blackwell, The Curb-Cut Effect</a></li>
+            <li><a href="https://webaim.org/projects/million/">WebAIM Million report, 2026</a></li>
+            <li><a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ADA.gov, Fact sheet on the 2024 web rule</a></li>
+            <li><a href="https://www.federalregister.gov/documents/2026/04/20/2026-07663/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web">Federal Register, 2026 extension of the compliance dates</a></li>
+            <li><a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en">European Commission, European Accessibility Act</a></li>
+            <li><a href="https://www.w3.org/mission/accessibility/">W3C, Accessibility</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <h2 class="sr-only">Page information</h2>
+      <p>Bryce Davis · ATLS-CSCI 3150 · Fall 2026</p>
+      <ul>
+        <li><a href="../#final-project">Class portal</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

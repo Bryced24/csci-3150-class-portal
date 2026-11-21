@@ -1,0 +1,417 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  margin: 0;
+  color: #1f2a2e;
+  background: #fbfaf7;
+  font: 1.125rem/1.65 "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+.wrap {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+}
+
+h1, h2 {
+  margin: 0 0 1rem;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, 3.75rem);
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  max-width: 65ch;
+  margin: 0 0 1rem;
+}
+
+a {
+  color: #17565c;
+  text-underline-offset: .2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid #1f2a2e;
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+code {
+  padding: .1em .3em;
+  border-radius: 4px;
+  background: #ece8de;
+  font: .9em Menlo, Consolas, monospace;
+}
+
+pre {
+  max-width: 65ch;
+  margin: 0 0 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  color: #fbfaf7;
+  background: #1f2a2e;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 2;
+  top: .75rem;
+  left: .75rem;
+  padding: .75rem 1rem;
+  background: #fbfaf7;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header {
+  border-bottom: 1px solid #e3ded3;
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+  padding-block: .5rem;
+}
+
+.logo {
+  color: #1f2a2e;
+  font: 600 1.375rem Fraunces, Georgia, serif;
+  text-decoration: none;
+}
+
+.site-header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header ul a {
+  display: block;
+  padding: .75rem .6rem;
+  color: #1f2a2e;
+}
+
+.site-header [aria-current="page"] {
+  font-weight: 700;
+  text-decoration-thickness: 3px;
+}
+
+.intro {
+  padding-block: 3rem 2rem;
+}
+
+.intro h1 {
+  max-width: 10em;
+}
+
+.intro p {
+  color: #45545a;
+  font-size: 1.25rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: block;
+  height: 100%;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-radius: 14px;
+  color: #1f2a2e;
+  text-decoration: none;
+}
+
+.card-title {
+  display: block;
+  font: 600 1.625rem Fraunces, Georgia, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .15em;
+}
+
+.card:hover .card-title {
+  text-decoration-thickness: 3px;
+}
+
+.card-text {
+  display: block;
+  margin-top: .25rem;
+}
+
+.why {
+  background: #f6d5c4;
+}
+
+.what {
+  background: #cfe6d8;
+}
+
+.how {
+  background: #f1e2a6;
+}
+
+.split {
+  padding-block: 2.5rem;
+  border-top: 1px solid #e3ded3;
+}
+
+.facts {
+  display: grid;
+  gap: .5rem 2rem;
+}
+
+.number {
+  display: block;
+  font: 600 2.75rem/1.15 Fraunces, Georgia, serif;
+}
+
+.source {
+  display: block;
+  margin-top: .25rem;
+  font-size: 1rem;
+}
+
+.page-intro {
+  padding-block: 2.5rem 2rem;
+}
+
+.page-intro p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.page-layout {
+  padding-block: 2rem 4rem;
+}
+
+.toc {
+  margin-bottom: 2.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e3ded3;
+  border-radius: 14px;
+  background: #ffffff;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.toc h2 {
+  margin-bottom: .25rem;
+  font: 700 1rem "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+.toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc a {
+  display: block;
+  padding-block: .4rem;
+}
+
+.content {
+  min-width: 0;
+}
+
+.content section + section {
+  margin-top: 3rem;
+}
+
+.content ul {
+  max-width: 65ch;
+  padding-left: 1.25rem;
+}
+
+.content li + li {
+  margin-top: .5rem;
+}
+
+.next {
+  margin-block: 3rem;
+  font-weight: 700;
+}
+
+.sources {
+  padding-top: 2rem;
+  border-top: 1px solid #e3ded3;
+  font-size: 1rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #1f2a2e;
+  font: 600 1.375rem/1.35 Fraunces, Georgia, serif;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+caption {
+  padding-bottom: .75rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+th, td {
+  padding: .75rem .5rem;
+  border-bottom: 1px solid #d6d0c4;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  border-bottom: 2px solid #1f2a2e;
+}
+
+dl {
+  margin: 0 0 1rem;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 0 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid #e3ded3;
+  font-size: 1rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  display: inline-block;
+  padding-block: .5rem;
+}
+
+@media (min-width: 40em) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    padding-block: 5rem 3rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-intro {
+    padding-block: 4rem 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 4rem;
+  }
+
+  .toc {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+  }
+}
+
+@media (forced-colors: active) {
+  .card {
+    border: 1px solid CanvasText;
+  }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to build an accessible website and test it with a keyboard and a screen reader.">
+  <title>How to build it | Open Door</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <a class="logo" href="index.html">Open Door</a>
+      <nav aria-labelledby="menu-heading">
+        <h2 class="sr-only" id="menu-heading">Main menu</h2>
+        <ul>
+          <li><a href="why.html">Why</a></li>
+          <li><a href="what.html">What</a></li>
+          <li><a href="how.html" aria-current="page">How</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <header class="page-intro how">
+      <div class="wrap">
+        <h1>How to build it</h1>
+        <p>Most accessibility problems come from a short list of mistakes. This page shows how to avoid them in your code and how to test for what you miss.</p>
+      </div>
+    </header>
+
+    <div class="wrap page-layout">
+      <nav class="toc" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">On this page</h2>
+        <ul>
+          <li><a href="#semantic">Start with semantic HTML</a></li>
+          <li><a href="#six-errors">Fix the six most common errors</a></li>
+          <li><a href="#keyboard">Keyboard and focus</a></li>
+          <li><a href="#forms">Forms and tables</a></li>
+          <li><a href="#aria">ARIA only when you need it</a></li>
+          <li><a href="#mobile">Mobile first CSS</a></li>
+          <li><a href="#testing">Test your site</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <section id="semantic" aria-labelledby="semantic-heading">
+          <h2 id="semantic-heading">Start with semantic HTML</h2>
+          <p>Use each HTML element for what it means. Landmarks like <code>header</code>, <code>nav</code>, <code>main</code>, and <code>footer</code> let screen reader users jump between parts of a page. Each page needs one <code>h1</code>, and the other headings should go in order.</p>
+          <pre><code>&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;
+  &lt;h1&gt;Page title&lt;/h1&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+        </section>
+
+        <section id="six-errors" aria-labelledby="six-errors-heading">
+          <h2 id="six-errors-heading">Fix the six most common errors</h2>
+          <p>The WebAIM Million report has found the same six errors at the top of its list for seven years. Those six types made up 96% of all the errors WebAIM detected.</p>
+          <table>
+            <caption>Most common errors on the top one million home pages, <time datetime="2026-02">February 2026</time></caption>
+            <thead>
+              <tr>
+                <th scope="col">Error</th>
+                <th scope="col">Home pages</th>
+                <th scope="col">How to fix it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Low contrast text</th>
+                <td>83.9%</td>
+                <td>Use a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text.</td>
+              </tr>
+              <tr>
+                <th scope="row">Missing alt text</th>
+                <td>53.1%</td>
+                <td>Describe informative images in the <code>alt</code> attribute. Use <code>alt=""</code> for decorative images.</td>
+              </tr>
+              <tr>
+                <th scope="row">Missing form labels</th>
+                <td>51%</td>
+                <td>Connect each input to a <code>label</code> with matching <code>for</code> and <code>id</code> values.</td>
+              </tr>
+              <tr>
+                <th scope="row">Empty links</th>
+                <td>46.3%</td>
+                <td>Give every link text. An icon link needs a text label for screen readers.</td>
+              </tr>
+              <tr>
+                <th scope="row">Empty buttons</th>
+                <td>30.6%</td>
+                <td>Give every button text, or an <code>aria-label</code> if it only shows an icon.</td>
+              </tr>
+              <tr>
+                <th scope="row">Missing document language</th>
+                <td>13.5%</td>
+                <td>Add a language attribute like <code>lang="en"</code> to the <code>html</code> element.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="keyboard" aria-labelledby="keyboard-heading">
+          <h2 id="keyboard-heading">Keyboard and focus</h2>
+          <ul>
+            <li>Make a skip link the first link on the page.</li>
+            <li>Keep the tab order the same as the visual order.</li>
+            <li>Never remove focus outlines. Style them with <code>:focus-visible</code> instead.</li>
+            <li>Make sure keyboard users can tab out of every menu and video player.</li>
+          </ul>
+        </section>
+
+        <section id="forms" aria-labelledby="forms-heading">
+          <h2 id="forms-heading">Forms and tables</h2>
+          <p>Every form field needs a label. Group related fields with <code>fieldset</code> and <code>legend</code>. Error messages should say what went wrong and how to fix it.</p>
+          <p>Use tables only for data, never for layout. Give each table a <code>caption</code>, and mark header cells with <code>th</code> and <code>scope</code>.</p>
+        </section>
+
+        <section id="aria" aria-labelledby="aria-heading">
+          <h2 id="aria-heading">ARIA only when you need it</h2>
+          <p>WAI-ARIA attributes add information that plain HTML does not cover. The first rule of ARIA is to use a native HTML element whenever one exists. A <code>button</code> element already works with a keyboard and a screen reader, while a <code>div</code> with <code>role="button"</code> needs extra code to do the same thing.</p>
+          <p>This site uses <code>aria-labelledby</code> to name each section and <code>aria-current</code> to mark the current page in the menu.</p>
+        </section>
+
+        <section id="mobile" aria-labelledby="mobile-heading">
+          <h2 id="mobile-heading">Mobile first CSS</h2>
+          <p>Write the phone layout first, then add <code>min-width</code> media queries for wider screens. Use <code>rem</code> units so text grows when someone changes their browser's font size. WCAG 2.2 asks for touch targets of at least 24 by 24 CSS pixels.</p>
+          <pre><code>.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 40em) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}</code></pre>
+          <p>This is the CSS for the cards on the home page. They stack on phones and appear in one row on wider screens.</p>
+        </section>
+
+        <section id="testing" aria-labelledby="testing-heading">
+          <h2 id="testing-heading">Test your site</h2>
+          <p>Automated tools only catch some errors. They cannot tell you if alt text makes sense or if a page is easy to use, so you need to test by hand too.</p>
+          <ul>
+            <li>Run the <a href="https://validator.w3.org/nu/">W3C Nu HTML Checker</a> to find code errors.</li>
+            <li>Run <a href="https://wave.webaim.org/">WAVE</a> or <a href="https://silktide.com/toolbar/">Silktide</a> to catch issues like low contrast and missing alt text.</li>
+            <li>Check the heading outline for sections without a heading.</li>
+            <li>Tab through every page without a mouse.</li>
+            <li>Listen to each page with VoiceOver or NVDA.</li>
+            <li>Zoom to 200% and try the site on a real phone.</li>
+          </ul>
+        </section>
+
+        <section class="sources" id="sources" aria-labelledby="sources-heading">
+          <h2 id="sources-heading">Sources</h2>
+          <ul>
+            <li><a href="https://webaim.org/projects/million/">WebAIM Million report, 2026</a></li>
+            <li><a href="https://www.w3.org/TR/WCAG22/">W3C, WCAG 2.2</a></li>
+            <li><a href="https://www.w3.org/TR/using-aria/">W3C, Using ARIA</a></li>
+            <li><a href="https://www.w3.org/WAI/test-evaluate/easy-checks/">W3C, Easy Checks</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <h2 class="sr-only">Page information</h2>
+      <p>Bryce Davis · ATLS-CSCI 3150 · Fall 2026</p>
+      <ul>
+        <li><a href="../#final-project">Class portal</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
